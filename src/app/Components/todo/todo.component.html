@@ -1,0 +1,40 @@
+<!-- <div *ngFor="let todo of todoList">
+    {{todo.id}}
+    {{todo.title}}
+</div> -->
+
+<!-- <div class="tab">
+  <mat-tab-group>
+    <mat-tab label="Completed TODo">
+      <div *ngFor="let todo of doneTasks$|async">
+        {{todo.id}}
+        {{todo.title}}
+      </div>
+
+    </mat-tab>
+    <mat-tab label="nonCompleted TODO">
+      <div *ngFor="let todo of undoneTasks$|async">
+        {{todo.id}}
+        {{todo.title}}
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div> -->
+
+
+
+<
+	<mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+		<ng-container *ngFor="let prop of displayedColumns">
+			<ng-container [matColumnDef]="prop">
+				<mat-header-cell *matHeaderCellDef> {{prop}} </mat-header-cell>
+				<mat-cell *matCellDef="let element">
+					{{element[prop]}}
+				</mat-cell>
+			</ng-container>
+		</ng-container>
+
+		<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+		<mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+	</mat-table>

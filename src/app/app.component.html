@@ -1,0 +1,15 @@
+<p>
+  <mat-toolbar color="primary" class="toolbar">
+    <span>My Todo List</span>
+    <!-- <div class="spacer"> -->
+
+      <a  mat-button  [routerLink]="'[/todo]'" style="margin-left: 20px;">
+        <mat-icon>home</mat-icon>
+      </a>
+
+      <a mat-button  [routerLink]="['about']" style="margin-left: 20px;"> About </a>
+    <!-- </div> -->
+  </mat-toolbar>
+</p>
+<router-outlet></router-outlet>
+<app-todo></app-todo>  
